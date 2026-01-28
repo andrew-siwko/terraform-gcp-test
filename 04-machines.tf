@@ -5,7 +5,12 @@ resource "google_compute_instance" "vm_instance" {
 
   tags = ["tf-vms"]
   
-  boot_disk {
+  metadata = {
+      # Replace 'your-username' with your local username
+      # Replace the string below with the contents of your ~/.ssh/id_rsa.pub
+      ssh-keys = "gcp-user:${file("/container_shared/ansible/ansible_rsa.pub")}"
+    }
+    boot_disk {
     initialize_params {
       image = "rhel-cloud/rhel-9"
     }
