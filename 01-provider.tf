@@ -19,7 +19,7 @@ terraform {
 provider "google" {
   project = "helpful-weft-485019-h7"
   region  = "us-east1"
-  zone    = "us-east1-b"
+  zone    = "us-east1-c"
 }
 variable "LINODE_API_KEY" {
   description = "The key to the Linode API"
