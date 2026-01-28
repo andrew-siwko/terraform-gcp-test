@@ -6,7 +6,9 @@ resource "google_compute_firewall" "allow-web-and-ssh" {
     protocol = "tcp"
     ports    = ["22", "80", "443"]
   }
-
+  allow {
+    protocol = "icmp"
+  }
   # This allows traffic from any IP address. 
   # For production, consider restricting "22" to your specific IP.
   source_ranges = ["0.0.0.0/0"]
