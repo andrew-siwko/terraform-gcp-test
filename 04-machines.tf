@@ -1,6 +1,6 @@
 resource "google_compute_instance" "vm_instance" {
   name         = "asiwko-vm-01"
-  machine_type = "f1-micro"
+  machine_type = "e2-medium"
   zone         = "us-central1-a"
 
   tags = ["tf-vms"]
