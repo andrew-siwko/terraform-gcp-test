@@ -10,6 +10,7 @@ resource "google_compute_instance" "vm_instance" {
       # Replace the string below with the contents of your ~/.ssh/id_rsa.pub
       ssh-keys = "gcp-user:${file("/container_shared/ansible/ansible_rsa.pub")}"
     }
+    allow_stopping_for_update = true
     boot_disk {
     initialize_params {
       image = "rhel-cloud/rhel-9"
