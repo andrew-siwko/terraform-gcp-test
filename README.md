@@ -28,6 +28,13 @@ The second Jenkins job imports my DNS zone.  I run it only once after the plan i
 ## Observations
 * GCP was my third provisioning project.
 * I spent only 2 days getting this working.  The week in betwen was spent on other projects.
+* Google required a "project" to contain the infrastructure.
+* GCP's network provisioning was the easiest with the least detail required.  I tend to like more specificity.
+  * GCP defined 4 ports in 2 lines of code. 
+  * AWS: 4 lines of code per port.
+  * Linode: 6 lines of code per port.
+  * IBM: 7 lines of code per port.
+  * Azure: 9 lines of code per port.
 * The Google console felt different from the start.  I've written a few apps which use google services.  It felt like they fit their console into their existing developer framework.
   * Start: 2026-01-21
   * Functional: 2026-01-28
