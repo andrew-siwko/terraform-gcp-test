@@ -1,9 +1,9 @@
 resource "google_compute_instance" "vm_instance" {
   name         = "asiwko-vm-01"
-  machine_type = "e2-medium"
-  zone         = "us-central1-a"
+  machine_type = var.instance_type
+  zone         = var.zone
 
-  tags = ["tf-vms"]
+  tags = ["asiwko-vms"]
   
   metadata = {
       # Replace 'your-username' with your local username
@@ -13,7 +13,7 @@ resource "google_compute_instance" "vm_instance" {
     allow_stopping_for_update = true
     boot_disk {
     initialize_params {
-      image = "rhel-cloud/rhel-9"
+      image = var.image
     }
   }
 

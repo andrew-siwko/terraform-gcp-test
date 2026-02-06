@@ -17,13 +17,9 @@ terraform {
 }
 
 provider "google" {
-  project = "helpful-weft-485019-h7"
-  region  = "us-central1"
-  zone    = "us-central1-a"
-}
-variable "LINODE_API_KEY" {
-  description = "The key to the Linode API"
-  type        = string
+  project = var.project
+  region  = var.region
+  zone    = var.zone
 }
 
 provider "linode" {

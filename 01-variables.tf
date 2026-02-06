@@ -4,16 +4,10 @@ variable "LINODE_API_KEY" {
   sensitive   = true
 }
 
-variable "instance_region" {
-  description = "The region to create the Linode instance"
-  type        = string
-  default     = "us-southeast"
-}
-
 variable "instance_type" {
   description = "Which instance type to create"
   type    = string
-  default = "g6-nanode-1"
+  default = "e2-medium"
 }
 
 variable "domain_name" {
@@ -26,4 +20,27 @@ variable "domain_soa_email" {
   description = "The domain manager e-mail address."
   type    = string
   default = "asiwko@siwko.org"
+}
+
+variable "project" {
+  description = "The google project id."
+  type    = string
+  default = "helpful-weft-485019-h7"
+}
+
+variable "region" {
+  description = "The google region."
+  type    = string
+  default = "us-central1"
+}
+
+variable "zone" {
+  description = "The google zone."
+  type    = string
+  default = "us-central1-a"
+}
+variable "image" {
+  description  = "The virtual machine image."
+  type         = string
+  default      = "rhel-cloud/rhel-9"
 }
