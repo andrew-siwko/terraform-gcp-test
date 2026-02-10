@@ -4,7 +4,7 @@ resource "google_compute_firewall" "allow-web-and-ssh" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22", "80", "443","8080"]
+    ports    = ["22", "80", "443"]
   }
   allow {
     protocol = "icmp"
