@@ -16,7 +16,7 @@ resource "linode_domain" "dns_zone" {
 }
 
 # Records for the public IP addresses.
-resource "linode_domain_record" "gcp01_siwko_org" {
+resource "linode_domain_record" "gcp01_a_record" {
   domain_id   = linode_domain.dns_zone.id
   name        = "gcp01"
   record_type = "A"
