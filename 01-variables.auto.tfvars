@@ -1,7 +1,7 @@
-instance_type    = "e2-medium"
 domain_name      = "siwko.org"
 domain_soa_email = "asiwko@siwko.org"
 project          = "helpful-weft-485019-h7"
 region           = "us-central1"
 zone             = "us-central1-a"
 image            = "rhel-cloud/rhel-9"
+admin_username   = "gcp-user"
