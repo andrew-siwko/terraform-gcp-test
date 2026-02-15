@@ -4,12 +4,6 @@ variable "LINODE_API_KEY" {
   sensitive   = true
 }
 
-variable "instance_type" {
-  description = "Which instance type to create"
-  type    = string
-  default = "e2-medium"
-}
-
 variable "domain_name" {
   description = "The domain to create instance records in."
   type    = string
@@ -39,8 +33,15 @@ variable "zone" {
   type    = string
   default = "us-central1-a"
 }
+
 variable "image" {
   description  = "The virtual machine image."
   type         = string
   default      = "rhel-cloud/rhel-9"
+}
+
+variable "admin_username" {
+  description  = "the root user name"
+  type         = string
+  default      = "gcp-user"
 }
