@@ -12,5 +12,5 @@ resource "google_compute_firewall" "allow-web-and-ssh" {
   # This allows traffic from any IP address. 
   # For production, consider restricting "22" to your specific IP.
   source_ranges = ["0.0.0.0/0"]
-  target_tags   = ["asiwko-vms"]
+  target_tags   = ["vms"]
 }
