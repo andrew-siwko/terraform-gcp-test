@@ -3,7 +3,6 @@ terraform {
     # We will be working with GCP and so will need the google provider
     google = {
       source  = "hashicorp/google"
-      version = "~> 5.0"
     }    # in order to update DNS on linode, we'll need the linode provider.
     linode = {
       source  = "linode/linode"
